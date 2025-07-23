@@ -103,6 +103,12 @@ body {
     overscroll-behavior: none; /* no rubber‑band on trackpads */
 }
 
+.message-text {
+    white-space: pre-wrap; /* respect user line breaks */
+    overflow-wrap: anywhere; /* break long words/urls */
+    word-break: break-word; /* older fallback */
+}
+
 /* === Main Chat Layout === */
 .chat-app.dark {
     background: var(--bg-primary);
@@ -350,6 +356,10 @@ body {
     position: relative;
 }
 
+.chat-messages {
+    overflow-x: hidden;
+}
+
 .chat-message:hover {
     background: rgba(255, 255, 255, 0.05);
     transform: translateX(4px);
@@ -408,6 +418,11 @@ body {
     transition: all var(--transition-medium);
     resize: none;
     outline: none;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-height: 160px; /* optional: stop it from growing forever */
+    overflow-y: auto;
 }
 
 .chat-input::placeholder {
