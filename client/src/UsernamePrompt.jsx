@@ -7,22 +7,27 @@ function UsernamePrompt({ onSubmit }) {
         e.preventDefault();
         const trimmed = name.trim();
         if (trimmed) {
-            localStorage.setItem("username", trimmed);
             onSubmit(trimmed);
         }
     };
 
     return (
-        <div style={{ padding: 40, textAlign: "center" }}>
-            <h2>Enter your name</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="username-prompt">
+            <h2>Welcome to Chat</h2>
+            <form className="username-form" onSubmit={handleSubmit}>
                 <input
+                    className="username-input"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name"
+                    placeholder="Enter your name"
                     autoFocus
+                    maxLength={50}
                 />
-                <button type="submit" style={{ marginLeft: 10 }}>
+                <button
+                    type="submit"
+                    className="username-submit"
+                    disabled={!name.trim()}
+                >
                     Join Chat
                 </button>
             </form>
