@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function NavBar({ rooms, currentRoom, onSelect }) {
     return (
         <div className="room-bar">
@@ -16,7 +18,9 @@ function NavBar({ rooms, currentRoom, onSelect }) {
                     </li>
                 ))}
             </ul>
-            <button className="edit-user-button">Edit User</button>
+            <Link to="/edit">
+                <button className="edit-user-button">Edit User</button>
+            </Link>
         </div>
     );
 }

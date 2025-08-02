@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import UsernamePrompt from "./UsernamePrompt.jsx";
-import NavBar from "./NavBar.jsx";
-import UsersList from "./UsersList.jsx";
+import { BrowserRouter } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
+import { pagesGenerated } from "~pages"; // virtual import from vite-plugin-pages
+import UsernamePrompt from "./components/UsernamePrompt.jsx";
+import NavBar from "./components/NavBar.jsx";
+import UsersList from "./components/UsersList.jsx";
+import EditUser from "./pages/EditUser.jsx";
 
 function App() {
     // username + rooms

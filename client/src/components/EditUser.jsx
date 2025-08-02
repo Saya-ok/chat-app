@@ -1,4 +1,11 @@
 import React from "react";
+import { useState } from "react";
+
+function handleEditUser(e, name, email, password) {
+    e.preventDefault();
+    // Add logic to update user info, e.g., API call
+    console.log("Edited user:", { name, email, password });
+}
 
 const EditUser = () => {
     return (
