@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import UsernamePrompt from "./UsernamePrompt.jsx";
-import RoomBar from "./RoomBar.jsx";
+import NavBar from "./NavBar.jsx";
 import UsersList from "./UsersList.jsx";
 
 function App() {
@@ -216,7 +216,7 @@ function App() {
 
     return (
         <div className="chat-app dark">
-            <RoomBar
+            <NavBar
                 rooms={roomList}
                 currentRoom={currentRoom}
                 onSelect={setCurrentRoom}

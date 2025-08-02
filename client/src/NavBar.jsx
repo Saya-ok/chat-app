@@ -1,4 +1,4 @@
-function RoomBar({ rooms, currentRoom, onSelect }) {
+function NavBar({ rooms, currentRoom, onSelect }) {
     return (
         <div className="room-bar">
             <h3>Rooms</h3>
@@ -16,8 +16,9 @@ function RoomBar({ rooms, currentRoom, onSelect }) {
                     </li>
                 ))}
             </ul>
+            <button className="edit-user-button">Edit User</button>
         </div>
     );
 }
 
-export default RoomBar;
+export default NavBar;

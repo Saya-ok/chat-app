@@ -142,7 +142,7 @@ body {
     z-index: -1;
 }
 
-/* === Room Bar === */
+/* === Nav Bar === */
 .room-bar {
     display: flex;
     align-items: center;
@@ -152,6 +152,7 @@ body {
     border-bottom: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-soft);
+    justify-content: space-between;
 }
 
 .room-bar h3 {
@@ -182,6 +183,23 @@ body {
     transition: all var(--transition-medium);
     position: relative;
     backdrop-filter: blur(10px);
+}
+
+.edit-user-button {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: var(--gradient-accent);
+    color: var(--text-secondary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--text-primary);
 }
 
 .room-button::before {
